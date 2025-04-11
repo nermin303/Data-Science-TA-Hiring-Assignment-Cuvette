@@ -1,197 +1,91 @@
-# Data-Science-TA-Hiring-Assignment-Cuvette
-Data Science TA Hiring Assignment – Cuvette
-Objective
-We’re looking for Teaching Assistants who not only understand Data Science concepts but can clearly explain them to students. This assignment evaluates your technical knowledge, problem-solving skills, and communication ability.
-Duration: ~3–4 hours
-Submit:
-Google Drive folder or GitHub repo with:
+# 📊 Student Performance Analysis Using Python
+
+This project analyzes student performance data to explore how various factors (like gender, parental education, and test preparation) affect academic success. We apply data visualization, feature engineering, and classification models (Logistic Regression & Random Forest) to predict whether a student passes or fails based on their scores.
+
+---
+## 📁 Dataset
+**Source**: `StudentsPerformance.csv`  
+The dataset contains **1000 records** and **8 columns**, including gender, race/ethnicity, parental education, lunch, test prep course, and scores in math, reading, and writing.
+
+---
+## 🧰 Technologies Used
+- Python
+- Pandas
+- Numpy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+---
+## 🔄 Project Workflow
+### 1. **Importing Libraries**
+Imported all necessary libraries for data manipulation, visualization, and machine learning, including Pandas, Matplotlib, Seaborn, and Scikit-learn.
+
+---
+### 2. **Data Exploration**
+- Loaded and inspected the dataset using functions like `head()`, `info()`, and `describe()`.
+- Verified that the dataset contains no missing values.
+- Renamed the `race/ethnicity` column to `race` for simplicity.
+- Identified the categorical and numerical features for analysis.
+
+---
+### 3. **Data Visualization**
+- **Pie Chart**: Gender distribution
+- **Bar Chart**: Parental level of education
+- **Average Scores by Test Preparation**: Math, Reading, Writing
+- **Boxplots**: Visualizing score distribution by category (gender, lunch, prep course, etc.)
+
+---
+### 4. **Feature Engineering**
+- Created a new feature called **average score** by averaging the math, reading, and writing scores.
+- Generated a binary target variable (**pass/fail**) based on whether a student's average score met a defined threshold (e.g., 60%).
+
+---
+### 5. **Label Encoding**
+- Converted categorical variables (e.g., gender, parental education, lunch type) into numerical values using label encoding to prepare for machine learning models.
+
+---
+### 6. **Train/Test Split**
+- Split the data into training and testing sets to evaluate model performance.
+- Ensured that the target variable was separated from the feature variables before training.
+
+---
+### 7. **Modeling**
+- Applied two classification algorithms:
+  - **Logistic Regression**: A linear model used to classify students as pass/fail.
+  - **Random Forest Classifier**: An ensemble model using multiple decision trees for improved accuracy.
+- Trained both models on the training data and evaluated them using the test data.
+
+---
+### 8. **Evaluation**
+
+| Model                | Accuracy | F1 Score | Precision |
+|---------------------|----------|----------|-----------|
+| Logistic Regression | 0.70     | 0.81     | 0.72      |
+| Random Forest       | 0.715    | 0.82     | 0.74      |
+
+- Random Forest slightly outperformed Logistic Regression.
+- Confusion matrices provided deeper insight into prediction quality.
+
+---
+## ✅ Conclusion
+- Test preparation significantly improves student performance.
+- Parental education level and lunch type influence student scores.
+- Classification models can effectively predict student success.
+- Insights can inform targeted educational interventions.
+---
+# 🗂️ SQL Analysis Project – Music Store Database
+This project involves querying a relational music store database to extract business insights related to sales, customer behavior, and employee relationships. The goal is to use SQL to answer real-world business questions.
+
+---
+
+## 🧰 Tools & Technologies
+- SQL Server
+- SSMS (SQL Server Management Studio)
+- 
+# 🗂️ Tableau Project – New York City Airbnb open Data
+https://public.tableau.com/app/profile/nermin.ashraf/viz/airbnbproject_17443845375040/Dashboard1 
+
+# 🗂️ Excel Project – Online Retail DataSet
+https://docs.google.com/spreadsheets/d/126q7HH_6LQ5eCIWQe4ZBjpjO36YqMA5K/edit?usp=drive_link&ouid=103328154854864824771&rtpof=true&sd=true 
 
-
-Jupyter notebook (.ipynb)
-
-
-SQL query file
-
-
-Tableau Public link
-
-
-Excel file
-
-
-README.md summarizing your steps
-
-
-Screen recording (10–15 mins) where you:
-
-
-Share your screen and explain your solution step-by-step
-
-
-Walk through your code, visualizations, logic, and thought process
-
-
-Upload it to Google Drive or YouTube (unlisted) and share the link
-
-
-
-✅ Section 1: Python + Machine Learning (1.5 hours)
-Dataset: Student Performance Dataset (Math & Portuguese)
-Tasks:
-Load the dataset and perform data cleaning.
-
-
-Perform EDA using visualizations (use seaborn, matplotlib).
-
-
-Predict whether a student will pass or fail based on scores and other features.
-
-
-Use Logistic Regression or Random Forest for classification.
-
-
-Evaluate the model using accuracy, confusion matrix, F1-score.
-
-
-Add comments/markdown to explain the steps.
-
-
-
-✅ Section 2: SQL (30–45 mins)
-Dataset: Chinook Database (Music Store)
-You can run it on SQLite Online or import into any SQL IDE.
-Tasks:
-List the top 5 customers by total purchase amount.
-
-
-Find the most popular genre in terms of total tracks sold.
-
-
-Retrieve all employees who are managers along with their subordinates.
-
-
-For each artist, find their most sold album.
-
-
-Write a query to get monthly sales trends in the year 2013.
-
-
-Submit a .sql file with queries and output screenshots.
-
-✅ Section 3: Tableau (30 mins)
-Dataset: Airbnb Listings in NYC
-Tasks:
-Create a dashboard showing:
-
-
-Listings count by neighborhood
-
-
-Price distribution per room type
-
-
-Availability trends
-
-
-Include filters for room type and neighborhood.
-
-
-Publish your dashboard to Tableau Public and share the link.
-
-
-
-✅ Section 4: Excel (30 mins)
-Dataset: Online Retail Dataset (UCI)
-Tasks:
-Clean the data (remove nulls, handle duplicates).
-
-
-Create a pivot table to show total sales by country and month.
-
-
-Add formulas to calculate:
-
-
-Average order value
-
-
-% contribution of each country to total sales
-
-
-Highlight top 5 countries by revenue using conditional formatting.
-
-
-Create a chart to visualize monthly revenue trend.
-
-
-
-✅ Section 5: Bonus (Optional, +15 mins)
-Write ~150 words on:
-How you’d support students struggling with concepts or deadlines.
-
-
-How you would break down a complex topic like “Gradient Descent” for beginners.
-
-
-
-✅ Section 6: AI Tools & LLMs (30 mins)
-Objective:
-We want to see how comfortable you are with the rapidly evolving AI landscape, especially tools powered by LLMs like ChatGPT or Claude.
-Tasks (Pick any 1 of the 2 options below):
-🧠 Option A: Prompt Engineering
- Use ChatGPT or any LLM to assist with one of your earlier tasks (e.g., EDA, SQL query building, Excel formula generation).
-Share the exact prompt(s) you used.
-
-
-Copy the response from the AI.
-
-
-Reflect briefly (3–4 lines):
-
-
-What did the AI do well?
-
-
-What did you have to modify or improve?
-
-
-🤖 Option B: Build with an AI Tool
- Use any AI-based tool (e.g., Notion AI, Excel Copilot, Tableau GPT, or ChatGPT Code Interpreter) to solve a small part of your assignment.
-Mention the tool and what you used it for.
-
-
-Upload a screenshot or output file.
-
-
-Briefly explain how this tool could help students in the course.
-
-
-
-Would you like me to update the Google Doc and PDF with this section included and re-share them?
-
-📹 Video Recording Instructions (Mandatory)
-Record a 10–15 minute video where you:
-Share your screen and explain each part of your solution
-
-
-Talk through your approach, challenges, and learnings
-
-
-Ensure your audio is clear and your screen is visible
-
-
-Keep your camera ON so we can see you while you explain
-
-
-Upload the video to:
-Google Drive (with view access) or
-
-
-YouTube (set to unlisted)
- Share the link along with your submission.
-
-
-
-
-Best of Luck!
- 
